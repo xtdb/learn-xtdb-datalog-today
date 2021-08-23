@@ -1,11 +1,11 @@
 # Learn XTDB Datalog Today
 
-_Learn XTDB Datalog Today_ is derived from the classic [learndatalogtoday.org](http://learndatalogtoday.org) tutorial materials, but adapted to focus on the [XTDB](https://xtdb.com) API and unique Datalog semantics.
+_Learn XTDB Datalog Today_ is derived from the classic [learndatalogtoday.org](http://learndatalogtoday.org) tutorial materials, but adapted to focus on the [xtdb](https://xtdb.com) API and unique Datalog semantics.
 
 ## Quickstart
 
-* Read the tutorial: https://nextjournal.com/learn-crux-datalog-today/learn-crux-datalog-today
-* Try online: https://nextjournal.com/try/learn-crux-datalog-today/learn-crux-datalog-today
+* Read the tutorial: https://nextjournal.com/learn-xtdb-datalog-today/learn-xtdb-datalog-today
+* Try online: https://nextjournal.com/try/learn-xtdb-datalog-today/learn-xtdb-datalog-today
 
 ## Installation
 
@@ -35,11 +35,11 @@ Use the "Run All" button at the top or the "Run Cell" buttons beside each Clojur
 To reinstall the tutorial: Treat this GitHub repository as the golden store. Make edits to the Markdown file in
 GitHub, then reimport the entire notebook using the following instructions.
 
-1. Log in as the `learn-crux-datalog-today` Nextjournal user (ask @deobald, @refset, or @johantonelli for creds)
+1. Log in as the `learn-xtdb-datalog-today` Nextjournal user (ask @deobald, @refset, or @johantonelli for creds)
 2. Go to the [Nextjournal Dashboard](https://nextjournal.com/dashboard) and open the "Learn XTDB Datalog Today" notebook.
 3. Open the "Share" dialog (in the upper-right):
    1. Select "Notebook Visibility: Private"
-   2. Select "Edit Slug" and change the slug to a name like `learn-crux-datalog-today-old-05` so it won't collide with the notebook you are about to import.
+   2. Select "Edit Slug" and change the slug to a name like `learn-xtdb-datalog-today-old-05` so it won't collide with the notebook you are about to import.
    3. Select "Published Version: Unpublish this notebook..."
 7. Edit the title of the document to `"Learn XTDB Datalog Today - Old05"` or something similar so it's easy to identify
 in the list of archived notebooks.
@@ -47,7 +47,7 @@ in the list of archived notebooks.
 in the list. Select "Actions: Archive". (At present, you cannot completely delete a notebook.)
 9. Follow the `"Installation"` instructions above, with the following additional steps from the "Share" dialog:
    1. Select "Notebook Visibility: Public"
-   2. Select "Edit Slug" and change the slug to `learn-crux-datalog-today`
+   2. Select "Edit Slug" and change the slug to `learn-xtdb-datalog-today`
    3. Select "Publish Changes" to see the preview dialog. Click "Publish".
 10. Check to make sure the public URLs in the `"Quickstart"` work correctly.
 
