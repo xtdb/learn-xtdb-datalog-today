@@ -2,7 +2,7 @@
 
 Learn XTDB Datalog Today is derived from the classic [learndatalogtoday.org](http://learndatalogtoday.org) tutorial materials, but adapted to focus on the [XTDB](https://xtdb.com) API and unique Datalog semantics, and extended with additional topics and exercises. It is an interactive tutorial designed to teach you the XTDB dialect of Datalog. Datalog is a declarative database query language with roots in logic programming. Datalog has similar expressive power to SQL.
 
-![XTDB Datalog Icon](https://github.com/xtdb/learn-xtdb-datalog-today/raw/master/images/find-where-icon.png)
+![XTDB Datalog Icon](https://github.com/xtdb/learn-xtdb-datalog-today/raw/main/images/find-where-icon.png)
 
 You can follow along by hitting the "Remix" button on the toolbar to start your own interactive session running entirely on the Nextjournal platform, or you can copy the steps into a Clojure REPL running locally on your machine. You could also use curl (or similar) to send the data and queries in this tutorial via HTTP to a [pre-built Docker image](https://xtdb.com/reference/installation.html#docker).
 
