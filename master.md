@@ -1,6 +1,6 @@
-# Learn xtdb Datalog Today
+# Learn XTDB Datalog Today
 
-Learn XTDB Datalog Today is derived from the classic [learndatalogtoday.org](http://learndatalogtoday.org) tutorial materials, but adapted to focus on the [XTDB](https://xtdb.com) API and unique Datalog semantics, and extended with additional topics and exercises. It is an interactive tutorial designed to teach you the XTDB dialect of Datalog. Datalog is a declarative database query language with roots in logic programming. Datalog has similar expressive power to SQL.
+Learn XTDB Datalog Today is derived from the classic [learndatalogtoday.org](http://learndatalogtoday.org) tutorial materials, but adapted to focus on the [xtdb](https://xtdb.com) API and unique Datalog semantics, and extended with additional topics and exercises. It is an interactive tutorial designed to teach you the xtdb dialect of Datalog. Datalog is a declarative database query language with roots in logic programming. Datalog has similar expressive power to SQL.
 
 ![XTDB Datalog Icon](https://github.com/xtdb/learn-xtdb-datalog-today/raw/main/images/find-where-icon.png)
 
@@ -10,7 +10,7 @@ The `master.md` source file for this notebook is available on [GitHub](https://g
 
 # Runtime Setup
 
-You need to get XTDB running before you can use it. Here we are using Clojure on the JVM and running XTDB locally, as an embedded in-memory library. However, the Datalog query API is identical for all clients and all these queries would work equally well over the network via HTTP and the Java/Clojure client library.
+You need to get xtdb running before you can use it. Here we are using Clojure on the JVM and running xtdb locally, as an embedded in-memory library. However, the Datalog query API is identical for all clients and all these queries would work equally well over the network via HTTP and the Java/Clojure client library.
 
 ```edn no-exec
 {:deps
@@ -292,15 +292,15 @@ This vector of maps contains two kinds of documents: documents relating to peopl
     :crux.db/id -219}])
 ```
 
-Note that XTDB also has a JSON-over-HTTP API that naturally supports JSON documents, this is possible because JSON can be very simply mapped to a subset of edn.
+Note that xtdb also has a JSON-over-HTTP API that naturally supports JSON documents, this is possible because JSON can be very simply mapped to a subset of edn.
 
-To start an in-memory instance of XTDB, you can use the `start-node` function like so:
+To start an in-memory instance of xtdb, you can use the `start-node` function like so:
 
 ```clojure
 (def my-node (crux/start-node {}))
 ```
 
-Loading the small amount of data we defined under `my-docs` above can be comfortably done in a single transaction. In practice you will often find benefit to batch `put` operations into groups of 1000 at a time. The following code maps over the docs to generate a single transaction containing one `:crux.tx/put` operation per document, then submits the transaction. Finally we call the `sync` function to ensure that the documents are fully indexed (and that the transaction has succeeded) before we attempt to run any queries -- this is necessary because of XTDB's asynchronous design.
+Loading the small amount of data we defined under `my-docs` above can be comfortably done in a single transaction. In practice you will often find benefit to batch `put` operations into groups of 1000 at a time. The following code maps over the docs to generate a single transaction containing one `:crux.tx/put` operation per document, then submits the transaction. Finally we call the `sync` function to ensure that the documents are fully indexed (and that the transaction has succeeded) before we attempt to run any queries -- this is necessary because of xtdb's asynchronous design.
 
 ```clojure
 (crux/submit-tx my-node (for [doc my-docs]
@@ -309,7 +309,7 @@ Loading the small amount of data we defined under `my-docs` above can be comfort
 (crux/sync my-node)
 ```
 
-With XTDB running and the data loaded, you can now execute a query, which is a Clojure map, by passing it to XTDB's `q` API, which takes the result of a `db` call as it's first value. The meaning of this query will become apparent very soon!
+With xtdb running and the data loaded, you can now execute a query, which is a Clojure map, by passing it to xtdb's `q` API, which takes the result of a `db` call as it's first value. The meaning of this query will become apparent very soon!
 
 ```clojure
 (crux/q (crux/db my-node)
@@ -333,7 +333,7 @@ Queries can then be executed trivially:
 
 # Extensible Data Notation
 
-In XTDB, a Datalog query is written in
+In xtdb, a Datalog query is written in
 [extensible data notation (edn)](http://edn-format.org). Edn is a data format similar to JSON, but it:
 
 * is extensible with user defined value types,
@@ -371,7 +371,7 @@ XTDB also supports queries in an alternative "vector" format:
      [_ :movie/title ?title]]
 ```
 
-However, in this tutorial we will use the map format. Also note that XTDB does not require logical variables to be preceded by `?`, although you may use this convention if you wish.
+However, in this tutorial we will use the map format. Also note that xtdb does not require logical variables to be preceded by `?`, although you may use this convention if you wish.
 
 ## Exercises
 
@@ -398,7 +398,7 @@ exclusively, from the 80s. You'll find information about movie titles,
 release year, directors, cast members, etc. As the tutorial advances
 we'll learn more about the contents of the database and how it's organized.
 
-The data model in XTDB is based around _atomic collections of facts._
+The data model in xtdb is based around _atomic collections of facts._
 Those atomic collections of facts are called _documents._
 The facts are called triples.
 A triple is a 3-tuple consisting of:
@@ -407,7 +407,7 @@ A triple is a 3-tuple consisting of:
 * Attribute
 * Value
 
-Although it is the document which is atomic in XTDB (and not the triple),
+Although it is the document which is atomic in xtdb (and not the triple),
 you can think of the database as a flat **set of triples** of the form:
 
     [<e-id>  <attribute>      <value>          ]
@@ -1069,7 +1069,7 @@ A2.
 
 # Aggregates
 
-Aggregate functions such as `sum`, `max` etc. are readily available in XTDB's Datalog implementation. They are written in the `:find` clause in your query:
+Aggregate functions such as `sum`, `max` etc. are readily available in xtdb's Datalog implementation. They are written in the `:find` clause in your query:
 
     {:find [(max date)]
      :where
