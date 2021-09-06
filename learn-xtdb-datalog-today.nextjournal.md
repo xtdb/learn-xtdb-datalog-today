@@ -18,7 +18,10 @@ You need to get xtdb running before you can use it. Here we are using Clojure on
   org.clojure/tools.deps.alpha
   {:git/url "https://github.com/clojure/tools.deps.alpha.git"
    :sha "f6c080bd0049211021ea59e516d1785b08302515"}
-  com.xtdb/xtdb-core {:mvn/version "RELEASE"}}}
+  com.xtdb/xtdb-core {:mvn/version "dev-SNAPSHOT"}} ;; "RELEASE"
+
+  :mvn/repos
+  {"snapshots" {:url "https://s01.oss.sonatype.org/content/repositories/snapshots"}}}
 ```
 
 ```clojure id=d3b699f1-702e-4aad-8657-4c419e14e88d
