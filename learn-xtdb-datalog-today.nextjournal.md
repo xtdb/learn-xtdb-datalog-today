@@ -1219,7 +1219,7 @@ A2.
 (q '{:find [friend]
      :in [name]
      :where [[p1 :person/name name]
-             (myfriends p1 p2)
+             (friends p1 p2)
              [p2 :person/name friend]]
      :rules [[(friends ?p1 ?p2)
               [?m :movie/cast ?p1]
@@ -1228,11 +1228,7 @@ A2.
              [(friends ?p1 ?p2)
               [?m :movie/cast ?p1]
               [?m :movie/director ?p2]
-              [(not= ?p1 ?p2)]]
-             [(myfriends ?p1 ?p2)
-              (friends ?p1 ?p2)]
-             [(myfriends ?p1 ?p2)
-              (friends ?p2 ?p1)]]}
+              [(not= ?p1 ?p2)]]]}
   "Sigourney Weaver")
 ```
 
