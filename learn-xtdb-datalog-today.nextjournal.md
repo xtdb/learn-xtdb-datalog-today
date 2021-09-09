@@ -1135,7 +1135,7 @@ Now becomes:
      :rules [[(actor-movie name title)
               [p :person/name name]
               [m :movie/cast p]
-              [m :movie/title "The Terminator"]]]})
+              [m :movie/title title]]]})
 ```
 
 You can write any number of rules, collect them in a vector, and pass them to the query engine using the `:rules` key, as above.
