@@ -1228,6 +1228,10 @@ A2.
              [(friends ?p1 ?p2)
               [?m :movie/cast ?p1]
               [?m :movie/director ?p2]
+              [(not= ?p1 ?p2)]]
+             [(friends ?p1 ?p2)
+              [?m :movie/director ?p1]
+              [?m :movie/cast ?p2]
               [(not= ?p1 ?p2)]]]}
   "Sigourney Weaver")
 ```
