@@ -981,7 +981,7 @@ Q1. Find people by age. Use the function `user/age` to find the names of people,
      :where ...})
 ```
 
-Q2. Find the names of people younger than Bruce Willis and their corresponding ages.
+Q2. Find the names of people younger than Bruce Willis and their corresponding age.
 
 ```clojure id=b94a242d-969e-40df-8a4f-f37325738cd3
 ;; remove '#_' to uncomment the query
