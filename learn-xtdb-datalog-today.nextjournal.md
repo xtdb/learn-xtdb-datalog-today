@@ -972,7 +972,7 @@ Instead, you must bind intermediate results in temporary logic variables:
 
 ## Exercises
 
-Q1. Find people by age. Use the function `user/age` to find the age given a birthday and a date representing "today".
+Q1. Find people by age. Use the function `user/age` to find the names of people, given their age and a date representing "today".
 
 ```clojure id=efe159a6-33df-481f-ad9c-751f4afebf48
 ;; remove '#_' to uncomment the query
