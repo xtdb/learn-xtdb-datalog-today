@@ -1,6 +1,6 @@
 # Learn XTDB Datalog Today
 
-_Learn XTDB Datalog Today_ is derived from the classic [learndatalogtoday.org](http://learndatalogtoday.org) tutorial materials, but adapted to focus on the [xtdb](https://xtdb.com) API and unique Datalog semantics.
+_Learn XTDB Datalog Today_ is derived from the classic [learndatalogtoday.org](http://www.learndatalogtoday.org) tutorial materials, but adapted to focus on the [xtdb](https://xtdb.com) API and unique Datalog semantics.
 
 ## Quickstart
 
