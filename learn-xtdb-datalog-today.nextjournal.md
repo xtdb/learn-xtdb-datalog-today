@@ -478,7 +478,7 @@ A1.
 A2.
 
 ```clojure id=95566a23-02bc-4969-93b8-31ed19e026d4
-(q '{:find [e]
+(q '{:find [e title]
      :where [[e :movie/title title]]})
 ```
 
